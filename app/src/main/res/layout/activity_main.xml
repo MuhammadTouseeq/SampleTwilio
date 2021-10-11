@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/purple_700"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/remoteUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="User"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_22sdp"/>
+
+        <TextView
+            android:id="@+id/callState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Ringing"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            />
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_8sdp"
+            android:gravity="center"
+            android:id="@+id/EdtDigits"
+            android:hint="Enter digits"
+            android:visibility="gone"
+            android:inputType="number"
+            android:textSize="@dimen/_20sdp"
+            android:layout_height="@dimen/_40sdp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@mipmap/ic_launcher"
+        android:padding="@dimen/_60sdp"
+        android:background="@color/white"
+        android:layout_weight="5"
+        android:contentDescription="Call background">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="70dp"
+            android:src="@drawable/ic_baseline_call_24"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:id="@+id/btnEndCall"
+            android:layout_height="70dp"/>
+        <ImageView
+            android:layout_width="70dp"
+            android:src="@drawable/ic_baseline_campaign_24"
+            android:layout_margin="10dp"
+            android:visibility="visible"
+            android:padding="15dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnSpeaker"
+            android:layout_height="70dp"/>
+    </RelativeLayout>
+</LinearLayout>
