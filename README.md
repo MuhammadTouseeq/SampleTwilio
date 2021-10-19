@@ -5,3 +5,7 @@ Sample app to use voice call feature of twilio
 
 Create account on twilio 
 deploy code on heroku to get token for initiate call
+
+# how to add extension in twilio
+```
+     twilloCall?.sendDigits(binding.EdtDigits.text.toString())
